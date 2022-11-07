@@ -1,6 +1,42 @@
-# Getting Started with Create React App
+# Documentasi React JS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Conditional Rendering
+
+Di React, tidak ada sintaks khusus untuk penulisan conditional. Sebagai gantinya, kita dapat menggunakan teknik yang sama seperti kode JavaScript biasa. Misalnya, menggunakan logika if untuk menyertakan JSX secara kondisional [[ref]](https://beta.reactjs.org/learn):
+
+```
+let content;
+if (isLoggedIn) {
+  content = <AdminPanel />;
+} else {
+  content = <LoginForm />;
+}
+return (
+  <div>
+    {content}
+  </div>
+);
+```
+
+Untuk code yang lebih ringkas kita bisa menggunakan ternari operator [[ref](https://beta.reactjs.org/learn)]:
+
+```
+<div>
+  {isLoggedIn ? (
+    <AdminPanel />
+  ) : (
+    <LoginForm />
+  )}
+</div>
+```
+
+jika conditional hanya memiliki satu cabang kita dapat menggunakan syntax `logical &&` [[ref](https://beta.reactjs.org/learn)]:
+
+```
+<div>
+  {isLoggedIn && <AdminPanel />}
+</div>
+```
 
 ## Available Scripts
 

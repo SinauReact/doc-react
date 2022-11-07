@@ -38,6 +38,30 @@ jika conditional hanya memiliki satu cabang kita dapat menggunakan syntax `logic
 </div>
 ```
 
+## Rendering Lists
+
+Kita dapat menggunakan fitur JavaScript seperti for loop dan fungsi array map() untuk merender list komponen. Misalnya, katakanlah Anda memiliki serangkaian produk:
+
+```
+const products = [
+  { title: 'Cabbage', id: 1 },
+  { title: 'Garlic', id: 2 },
+  { title: 'Apple', id: 3 },
+];
+```
+
+Di dalam komponen Anda, gunakan fungsi map() untuk mengubah array produk menjadi array item <li>:
+
+```
+     <ul>
+        {products.map((product) => (
+          <li key={product.id}>
+            {product.title}
+          </li>
+        ))}
+    </ul>
+```
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -104,3 +128,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+```
+
+```
